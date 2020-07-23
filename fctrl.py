@@ -31,7 +31,9 @@
 
 '''
 def factorial(number):
-    if number == 1 or number == 0:
+    if number == 1:
+        return number
+    elif number == 0:
         return number
     elif number < 0:
         exit()
