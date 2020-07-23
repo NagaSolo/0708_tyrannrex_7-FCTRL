@@ -30,7 +30,19 @@
     2183837
 
 '''
+def factorial(number):
+    if number == 1 or number == 0:
+        return number
+    elif number < 0:
+        exit()
+    else:
+        return number*factorial(number-1)
 
-testcases = int(input())
-for test in range(testcases):
-    print(test)
+T = int(input())
+list_number = list()
+for test in range(T):
+    N = int(input())
+    list_number.append(N)
+copy = list_number.copy()
+factorial_list = list(map(factorial, copy))
+print(list_number, factorial_list, sep=',')
